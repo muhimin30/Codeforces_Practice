@@ -1,0 +1,1 @@
+{"name":"Local: 42-A","url":"c:\\Users\\muhim\\OneDrive\\Desktop\\Code\\practice\\42-A.cpp","tests":[{"id":1698258991140,"input":"4\n1 3 2 1\n","output":"2"},{"id":1698259000733,"input":"6\n2 2 2 2 2 2\n","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\muhim\\OneDrive\\Desktop\\Code\\practice\\42-A.cpp","group":"local","local":true}
