@@ -10,30 +10,29 @@ using namespace std;
 int main()
 {
   	bismillah();
+
 	int t; cin >> t;
 	while(t--){
+		map<int , int> num;
+
 		int n; cin >> n;
 
-		int one_pos = ceil(n/2.0);
-
-		int num = 2;
 		for(int i = 1; i <= n; i++){
-			if(num == 3) num++;
-			if(i == one_pos){
-				cout << 1 << ' ';
-			}
-			else if(i == n && n > 2){
-				cout << 3 << ' ';
-			}
-			else{
-				cout << num << ' ';
-				num++;
-			}
+			int temp; cin >> temp;
 			
+			num[temp] = i;
 		}
-		
-		cout << endl;
+
+		int cnt = 0;
+
+		for(int i = 1; i < n; i++){
+			if(num[i] > num[i + 1]){
+				cnt++;
+			}
+		}
+
+		cout << cnt << endl;
 	}
 
-  	return 0;
+ 	 return 0;
 }
