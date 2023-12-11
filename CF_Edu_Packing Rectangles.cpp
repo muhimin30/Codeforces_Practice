@@ -11,31 +11,32 @@ int main()
 {
 	bismillah();
 
-	int t; cin >> t;
-	while(t--){
-		int n, k; cin >> n >> k;
+	ll w, h , n; cin >> w >> h >> n;
 
-		int cnt = 0;
-		for(int i = 1; i <= n; i++){
-			int temp; cin >> temp;
+	ll mx = max(w, h);
 
-			if(abs(temp - i) % k != 0){
-				cnt++;
-			}
-		}
+	ll ans = 0;
 
+	ll l = 1, r = 1e14;
 
-		if(cnt == 0 || k == 1){
-			cout << 0 << endl;
-		}
-		else if(cnt == 2){
-			cout << 1 << endl;
+	while(l <= r){
+		 
+		ll mid = (l + r) / 2;
+
+		ll width_cnt = mid / w;
+		ll height_cnt = mid / h;
+		if(width_cnt >= ceil((double)n / height_cnt)){
+			ans = mid;
+			r = mid - 1;
 		}
 		else{
-			cout << -1 << endl;
+			l = mid + 1;
 		}
-
 	}
+
+	cout << ans << endl;
+
+	
 
 	return 0;
 }

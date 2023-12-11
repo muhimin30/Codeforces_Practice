@@ -12,29 +12,30 @@ int main()
 	bismillah();
 
 	int t; cin >> t;
+
 	while(t--){
-		int n, k; cin >> n >> k;
+		int n; cin >> n;
 
-		int cnt = 0;
-		for(int i = 1; i <= n; i++){
-			int temp; cin >> temp;
+		vector<int> num(n + 1);
 
-			if(abs(temp - i) % k != 0){
-				cnt++;
-			}
-		}
-
-
-		if(cnt == 0 || k == 1){
-			cout << 0 << endl;
-		}
-		else if(cnt == 2){
+		if(n == 1){
 			cout << 1 << endl;
+			continue;
+		}
+		else if(n % 2 == 1){
+			cout << - 1 << endl;
 		}
 		else{
-			cout << -1 << endl;
-		}
+			for(int i = 1; i <= n; i += 2){
+				num[i] = i + 1;
+				num[i + 1] = i;
+			}
 
+			for(int i = 1; i <= n; i++){
+				cout << num[i] << ' ';
+			}
+			cout << endl;
+		}
 	}
 
 	return 0;
