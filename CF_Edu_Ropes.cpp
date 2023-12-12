@@ -35,22 +35,28 @@ int main()
 	for(int i = 0; i < n; i++){
 		cin >> num[i];
 	}
+	
+	// for(int i = 0; i < n; i++){
+	// 	cout << num[i] << endl;
+	// }
 
-	double l = 0.0, r = 1e12 + 0.0;
+	double l = 0, r = 1e11;
 
 	double ans;
-	while(l <= r){
+	while(r - l >= 1e-7){
 		double mid = (l + r) / 2.0;
+
+		//cout << mid << endl;
 
 		if(check(mid)){
 			ans = mid;
-			l = mid + 0.01;
+			l = mid;
 		}
 		else{
-			r = mid - 0.01;
+			r = mid;
 		}
 	} 
 
-	cout << fixed << setprecision(1) << ans << endl;
+ cout << fixed << setprecision(6) << ans << endl;
 	return 0;
 }
