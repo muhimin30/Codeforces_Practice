@@ -36,17 +36,11 @@ int main()
 		cin >> num[i];
 	}
 	
-	// for(int i = 0; i < n; i++){
-	// 	cout << num[i] << endl;
-	// }
-
 	double l = 0, r = 1e11;
 
 	double ans;
 	while(r - l >= 1e-7){
 		double mid = (l + r) / 2.0;
-
-		//cout << mid << endl;
 
 		if(check(mid)){
 			ans = mid;

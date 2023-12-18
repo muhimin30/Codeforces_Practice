@@ -3,6 +3,10 @@
 		"iostream": "cpp",
 		"ratio": "cpp",
 		"cmath": "cpp",
-		"iosfwd": "cpp"
+		"iosfwd": "cpp",
+		"*.tcc": "cpp",
+		"string": "cpp",
+		"unordered_map": "cpp",
+		"unordered_set": "cpp"
 	}
 }
