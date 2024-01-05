@@ -9,6 +9,8 @@
 		"unordered_map": "cpp",
 		"unordered_set": "cpp",
 		"complex": "cpp",
-		"cstdlib": "cpp"
+		"cstdlib": "cpp",
+		"sstream": "cpp",
+		"regex": "cpp"
 	}
 }
