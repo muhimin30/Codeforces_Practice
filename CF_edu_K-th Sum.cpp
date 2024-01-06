@@ -17,7 +17,7 @@ int fix(ll m){
 }
 
 bool check(ll m){
-	int cnt = 0;
+	ll cnt = 0;
 	for(int i = 0; i < n; i++){
 		//cout << m << ' ' << i << ' ' << a[i] << endl;
 		ll temp = m - a[i];
@@ -32,6 +32,7 @@ bool check(ll m){
 int main()
 {
 	bismillah();
+
 	cin >> n >> k;
 	for(int i = 1; i <= n; i++){
 		int temp; cin >> temp;
