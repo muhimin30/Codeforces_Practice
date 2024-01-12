@@ -11,6 +11,8 @@
 		"complex": "cpp",
 		"cstdlib": "cpp",
 		"sstream": "cpp",
-		"regex": "cpp"
+		"regex": "cpp",
+		"deque": "cpp",
+		"vector": "cpp"
 	}
 }
