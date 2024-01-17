@@ -13,12 +13,27 @@ int arr[1123];
 
 bool check (int x){
 	int cnt = 0;
+	int left = m;
 	for(int i = 0; i < n; i++){
-		int block = (num[i][0] * num[i][1]) + num[i][2];
-		int total_block = (x /     ) + (x - floor(x * block));
-		cnt += total_block;
+		int block_time = (num[i][0] * num[i][1]) + num[i][2];
+		int full_block = x / block_time;
+		int remain = x - (full_block * block_time);
+		int remain_cnt;
+		if(remain >=(num[i][0] * num[i][1])){
+			remain_cnt = num[i][1];
+		}
+		else{
+			remain_cnt = (remain / num[i][0]);
+		}
+		cnt += (full_block * num[i][1]) + remain_cnt ;
+		arr[i] = min((full_block * num[i][1]) + remain_cnt, left);
+
+		left -= arr[i];
+
+		if(cnt > 1e7) return true;
 	}
-	cout << x << ' ' << cnt << endl;
+	//cout << x << ' ' << cnt << endl; 
+	
 	return (cnt >= m);
 }
 
@@ -56,6 +71,9 @@ int main()
 		}
 	}
 
+	check(ans);
 	cout << ans << endl;
+	for(int i = 0; i < n; i++) cout << arr[i] << ' ';
+	cout << endl;
 	return 0;
 }
