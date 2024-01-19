@@ -14,6 +14,7 @@ bool is_available(int v){
 	while(l <= r){
 		int mid = (1LL * l + r) / 2;
 
+
 		if(num[mid] == v){
 			return true;
 		}
