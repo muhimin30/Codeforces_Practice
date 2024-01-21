@@ -15,7 +15,7 @@ bool check(int m){
 
 	ll sum = 0;
 	if(m >= all_weeks){
-		ll weekly  = all_weeks * tk * 2;;
+		ll weekly  = 1LL * all_weeks * tk * 2;;
 		if(week % 2 == 1){
 			weekly -= tk;
 		}
